@@ -1,7 +1,7 @@
 import { ProjectTestsPage } from './app.po';
 
 describe('project-tests App', function() {
-  let page: ProjectTestsPage;
+  let page: TestProjectPage;
 
   beforeEach(() => {
     page = new ProjectTestsPage();
