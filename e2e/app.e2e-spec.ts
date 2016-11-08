@@ -1,10 +1,10 @@
-import { ProjectTestsPage } from './app.po';
+import { TestProjectPage } from './app.po';
 
-describe('project-tests App', function() {
+describe('test-project App', function() {
   let page: TestProjectPage;
 
   beforeEach(() => {
-    page = new ProjectTestsPage();
+    page = new TestProjectPage();
   });
 
   it('should display message saying app works', () => {
