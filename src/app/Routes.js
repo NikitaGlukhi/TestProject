@@ -13,7 +13,6 @@ var routes = [
     { path: 'mathematics', component: HomeComponent_1.HomeComponent },
     { path: 'about', component: AboutComponent_1.AboutComponent },
     { path: 'contact', component: ContactComponent_1.ContactComponent },
-    { path: 'contactus', redirectTo: 'contact' },
     { path: 'results/:res/:unres/:n/:sn', component: Results_1.ResultComponent },
     { path: 'results1/:res1/:unres1', component: Results1_1.Results1Component },
 ];
