@@ -15,7 +15,7 @@ import {Results1Component} from "./Results1";
 
 const routes: Routes = [
 
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', redirectTo: ContactComponent },
   { path: 'mathematics', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'results/:res/:unres/:n/:sn', component: ResultComponent},
