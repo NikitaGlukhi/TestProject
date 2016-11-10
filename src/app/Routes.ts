@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'results/:res/:unres/:n/:sn', component: ResultComponent},
   { path: 'results1/:res1/:unres1', component: Results1Component},
-  { path: '', component: ContactComponent },
+  { path: '', component: ContactComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
