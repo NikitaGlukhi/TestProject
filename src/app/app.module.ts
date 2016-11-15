@@ -12,7 +12,7 @@ import {ResultComponent} from "./Results";
 import {Results1Component} from "./Results1";
 import { HttpModule } from '@angular/http';
 import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
-
+import { LocationStrategy, HashLocationStrategy} from "@angular/common";
 
 
 @NgModule({
@@ -25,10 +25,10 @@ import { MyNewComponentComponent } from './my-new-component/my-new-component.com
     HttpModule
     ],
 
-
-
   declarations: [ AppComponent, HomeComponent, AboutComponent, ContactComponent, ResultComponent, Results1Component, MyNewComponentComponent],
 
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
