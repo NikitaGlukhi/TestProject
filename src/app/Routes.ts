@@ -6,18 +6,17 @@ import {
   RouterModule
 } from '@angular/router';
 
-import {HomeComponent} from './Components/HomeComponent';
-import {AboutComponent} from './Components/AboutComponent';
 import {ContactComponent} from './Components/ContactComponent';
 import {ModuleWithProviders} from "@angular/core";
 import {ResultComponent} from "./Results";
 import {Results1Component} from "./Results1";
+import {PhysicsComponent, MathComponent} from "./Components/SubjectsComponent";
 
 const routes: Routes = [
 
   { path: '', redirectTo: 'contact', pathMatch: 'full' },
-  { path: 'mathematics', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'mathematics', component: MathComponent },
+  { path: 'physics', component: PhysicsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'contactus', redirectTo: 'contact' },
   { path: 'results/:res/:unres/:n/:sn', component: ResultComponent},

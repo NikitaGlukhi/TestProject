@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {AppComponent} from "./app.component";
 import {RouterModule} from "@angular/router";
 import {routing} from "./Routes";
-import {HomeComponent} from "./Components/HomeComponent";
-import {AboutComponent} from "./Components/AboutComponent";
+import {MathComponent, PhysicsComponent} from "./Components/SubjectsComponent";
 import {ContactComponent} from "./Components/ContactComponent";
 import {FormsModule}   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,7 +26,7 @@ import { MyNewComponentComponent } from './my-new-component/my-new-component.com
 
 
 
-  declarations: [ AppComponent, HomeComponent, AboutComponent, ContactComponent, ResultComponent, Results1Component, MyNewComponentComponent],
+  declarations: [ AppComponent, MathComponent, PhysicsComponent, ContactComponent, ResultComponent, Results1Component, MyNewComponentComponent],
 
   bootstrap: [ AppComponent ]
 })

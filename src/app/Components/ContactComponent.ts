@@ -14,7 +14,7 @@ import {Component} from '@angular/core';
              </style>
             
              <a routerLink="/mathematics"><h2>Математика</h2></a> 
-             <a routerLink="/about"><h2>Физика</h2></a>
+             <a routerLink="/physics"><h2>Физика</h2></a>
 `
 })
 export class ContactComponent { }
