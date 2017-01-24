@@ -1,0 +1,2 @@
+[6040:6040:1031/145409:WARNING:password_store_factory.cc(250)] Using basic (unencrypted) store for password storage. See https://chromium.googlesource.com/chromium/src/+/master/docs/linux_password_storage.md for more information about password storage options.
+[6040:6040:1031/150522:ERROR:chrome_browser_main_extra_parts_x11.cc(66)] X IO error received (X server probably went away)
