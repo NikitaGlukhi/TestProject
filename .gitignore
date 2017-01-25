@@ -33,6 +33,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/src/*.js
-/src/*.map
-/src/*.config.js
+# src
+src/**/*.js
+src/**/*.map
