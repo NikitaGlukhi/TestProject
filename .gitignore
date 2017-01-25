@@ -35,3 +35,4 @@ Thumbs.db
 
 /src/*.js
 /src/*.map
+/src/*.config.js
