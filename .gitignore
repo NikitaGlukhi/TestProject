@@ -37,4 +37,7 @@ Thumbs.db
 /src/*.js
 /src/*.map
 
+# TestProject
+/TestProject/*.js
+/TestProject/*.map
 
