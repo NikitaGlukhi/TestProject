@@ -10,14 +10,13 @@ import {ContactComponent} from './Components/ContactComponent';
 import {ModuleWithProviders} from "@angular/core";
 import {ResultComponent} from "./Results";
 import {Results1Component} from "./Results1";
-import {PhysicsComponent, MathComponent, PhysicsComponent1} from "./Components/SubjectComponent";
+import {PhysicsComponent, MathComponent} from "./Components/SubjectComponent";
 
 const routes: Routes = [
 
   { path: 'contact', component: ContactComponent },
   { path: 'mathematics', component: MathComponent },
   { path: 'physics', component: PhysicsComponent },
-  { path: 'physics', component: PhysicsComponent1 },
   { path: 'results/:res/:unres/:n/:sn', component: ResultComponent},
   { path: 'results1/:res1/:unres1', component: Results1Component},
   { path: '', component: ContactComponent, data:{'home': true} },
