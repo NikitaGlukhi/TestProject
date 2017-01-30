@@ -2,7 +2,7 @@
  * Created by nikita_glukhi on 1/24/17.
  */
 import {FormControl, FormGroup} from '@angular/forms';
-import {Component} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 import any = jasmine.any;
 import {Routes, Router} from '@angular/router';
 
@@ -348,12 +348,8 @@ export class MathComponent {
   
   <h1>Задания</h1>
   <h4>Во всех заданиях может быть только ОДИН вариант ответа. Удачи!</h4>
-  <h2>Задание 1</h2>
-  <p><b>Из открытого люка автомобиля, который движется прямолинейно и равномерно со скоростью 25 м/с в направлении, противоположном движению, горизонтально бросают мячик со скоростью 5 м/с относительно автомобиля. Какова скорость этого мячика относительно Земли?</b><Br>
-  <p>А</p><input type="radio" name="answer13" [formControl] = "searchControl13" value="1">5 м/с<Br> 
-  <p>Б</p><input type="radio" name="answer13" [formControl] = "searchControl13" value="2">20 м/с<Br>
-  <p>В</p><input type="radio" name="answer13" [formControl] = "searchControl13" value="3">25 м/с<Br>
-  <p>Г</p><input type="radio" name="answer13" [formControl] = "searchControl13" value="4">30 м/с<Br>
+  
+  <physics1 (answerEmit) = "ansswer13($event)"></physics1>
   
   <h2>Задание 2</h2>
   <p><b>Какой из приведенных ниже графиков правильно показывает зависимость потенциальной энергии этого тела относительно поверхности Земли от времени?</b><Br>
@@ -431,19 +427,18 @@ export class PhysicsComponent {
   res1 = 0;
   unres1 = 0;
 
-  public Func() {
-
-
-
-    if (this.answer13 == 2) {
+  public result13: number = 2;
+  public ansswer13(value: number) {
+    if (value == 2) {
       console.log("Правильно");
-      this.res1 +=1;
+      this.res1 += 1;
     }
     else {
       console.log("Неправильно");
-      this.unres1 +=1;
+      this.unres1 += 1;
     }
-
+  }
+    public Func() {
     if (this.answer14 == 2) {
       console.log("Правильно");
       this.res1 +=1;
@@ -533,9 +528,6 @@ export class PhysicsComponent {
 
   constructor (private router: Router) {  }
 
-  public result13: number = 2;
-  public answer13: number ;
-
   public result14: number = 2;
   public answer14: number ;
 
@@ -565,8 +557,6 @@ export class PhysicsComponent {
 
   registerForm: FormGroup;
 
-  searchControl13 = new FormControl();
-
   searchControl14 = new FormControl();
 
   searchControl15 = new FormControl();
@@ -586,10 +576,6 @@ export class PhysicsComponent {
   searchControl22 = new FormControl();
 
   ngOnInit() {
-    this.searchControl13.valueChanges.subscribe(value => {
-      console.log(value);
-      this.answer13 = value;
-    });
 
     this.searchControl14.valueChanges.subscribe(value => {
       console.log(value);
@@ -639,3 +625,33 @@ export class PhysicsComponent {
 
   }
 }
+
+@Component ({
+  selector: 'physics1',
+  template: `<form (ngSubmit) = "Func1(TaskForm)" #TaskForm="ngForm">
+   <h2>Задание 1</h2>
+  <p><b>Из открытого люка автомобиля, который движется прямолинейно и равномерно со скоростью 25 м/с в направлении, противоположном движению, горизонтально бросают мячик со скоростью 5 м/с относительно автомобиля. Какова скорость этого мячика относительно Земли?</b><Br>
+  <p>А</p><input type="radio" name="answer13" [formControl] = "searchControl13" value="1">5 м/с<Br>
+  <p>Б</p><input type="radio" name="answer13" [formControl] = "searchControl13" value="2">20 м/с<Br>
+  <p>В</p><input type="radio" name="answer13" [formControl] = "searchControl13" value="3">25 м/с<Br>
+  <p>Г</p><input type="radio" name="answer13" [formControl] = "searchControl13" value="4">30 м/с<Br>
+</form>`
+})
+  export class PhysicsComponent1 {
+
+  @Output() answerEmit = new EventEmitter<number>();
+
+  registerForm: FormGroup;
+
+  constructor (private router: Router) {  }
+
+  searchControl13 = new FormControl();
+
+  ngOnInit() {
+    this.searchControl13.valueChanges.subscribe(value => {
+      this.answerEmit.emit(value);
+    });
+  }
+}
+
+

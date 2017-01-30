@@ -11,7 +11,7 @@ import {Results1Component} from "./Results1";
 import { HttpModule } from '@angular/http';
 import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
 import { LocationStrategy, HashLocationStrategy} from "@angular/common";
-import {MathComponent, PhysicsComponent} from "./Components/SubjectComponent";
+import {MathComponent, PhysicsComponent, PhysicsComponent1} from "./Components/SubjectComponent";
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import {MathComponent, PhysicsComponent} from "./Components/SubjectComponent";
     HttpModule
     ],
 
-  declarations: [ AppComponent, MathComponent, PhysicsComponent, ContactComponent, ResultComponent, Results1Component, MyNewComponentComponent],
+  declarations: [ AppComponent, MathComponent, PhysicsComponent, PhysicsComponent1, ContactComponent, ResultComponent, Results1Component, MyNewComponentComponent],
 
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 
