@@ -24,7 +24,7 @@ import {MathComponent, PhysicsComponent} from "./Components/SubjectComponent";
     HttpModule
     ],
 
-  declarations: [ AppComponent, MathComponent, PhysicsComponent, ContactComponent, ResultComponent, Results1Component, MyNewComponentComponent],
+  declarations: [ AppComponent, MathComponent, PhysicsComponent, ContactComponent, ResultComponent, Results1Component, MyNewComponentComponent, MyNewComponentComponent],
 
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 
