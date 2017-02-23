@@ -7,7 +7,7 @@
     "demo.gh-pages": "run-s build demo.build demo.deploy",
     "demo.build": "ng build -prod --aot --gh '' &&npm run generate-pt",
     "demo.deploy": "gh-pages -d demo/dist",
-    "demo-beta-deploy": "gh-pages -d demo/dist -r git@github.com:nikitaglukhi/project-test -b gh-pages",
+    "demo-beta-deploy": "gh-pages -d demo/dist -r git@github.com:nikitaglukhi/project-tests -b gh-pages",
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
