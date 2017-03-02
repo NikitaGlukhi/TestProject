@@ -73,7 +73,6 @@ export class MathComponent {
       this.unres +=1;
     }
 
-
     if (this.answer2 == MaAnswers.Answer2) {
       console.log("Правильно");
       this.res +=1;
@@ -122,38 +121,38 @@ export class MathComponent {
 
     if (this.answer7 == MaAnswers.Answer7) {
       console.log("Правильно");
-      this.res += 1;
+      this.res +=1;
     }
     else {
       console.log("Неправильно");
-      this.unres += 1;
+      this.unres +=1;
     }
 
     if (this.answer8 == MaAnswers.Answer8) {
       console.log("Правильно");
-      this.res += 1;
+      this.res +=1;
     }
     else {
       console.log("Неправильно");
-      this.unres += 1;
+      this.unres +=1;
     }
 
     if (this.answer9 == MaAnswers.Answer9) {
       console.log("Правильно");
-      this.res += 1;
+      this.res +=1;
     }
     else {
       console.log("Неправильно");
-      this.unres += 1;
+      this.unres +=1;
     }
 
     if (this.answer10 == MaAnswers.Answer10) {
       console.log("Правильно");
-      this.res += 1;
+      this.res +=1;
     }
     else {
       console.log("Неправильно");
-      this.unres += 1;
+      this.unres +=1;
     }
 
     this.router.navigate(['/results', this.res, this.unres]);
