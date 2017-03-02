@@ -11,7 +11,7 @@ export const PysicsQuestions = [
       {
         value11: 1,
         letter11:'А)',
-        print1: '5 м/с'
+        print11: '5 м/с'
       },
 
       {
